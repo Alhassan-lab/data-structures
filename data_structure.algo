@@ -1,0 +1,40 @@
+
+
+Problem 1
+
+def find_distinct_sum(set1, set2):
+
+  sum = 0
+  seen = set()
+
+  for i in set1:
+    if i not in seen:
+      sum += i
+      seen.add(i)
+
+  for i in set2:
+    if i not in seen:
+      sum += i
+      seen.add(i)
+
+  return sum
+
+
+// This algorithm works by first initializing a variable `sum` to 0. Then, it iterates through the first set and adds each element to the `seen` set if it is not already present. If the element is not present in the `seen` set, then it is added to the `sum` variable. The algorithm then iterates through the second set and repeats the same process. Finally, the algorithm returns the value of the `sum` variable.
+
+Problem 2
+
+
+def dot_product(v1, v2):
+
+  ps = 0
+  for i in range(len(v1)):
+    ps += v1[i] * v2[i]
+
+  return ps
+
+def is_orthogonal(v1, v2):
+  return dot_product(v1, v2) == 0
+
+
+// This algorithm works by first calling the `dot_product` function to calculate the dot product of the two vectors. If the dot product is equal to 0, then the vectors are orthogonal. Otherwise, the vectors are not orthogonal.
